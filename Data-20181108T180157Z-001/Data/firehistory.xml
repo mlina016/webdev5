@@ -1,0 +1,932 @@
+﻿<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Susan Goodman, The Department of the Interior, Office of Wildland Fire, Fire Management Analyst</origin>
+        <pubdate>20170623</pubdate>
+        <title>Federal Wildland Fire Activity from 1980 to 2016</title>
+        <edition>2016</edition>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Fire history reports by date and organization: 1980 to 2016</abstract>
+      <purpose>The purpose of this geospatial data is to provide a depiction of federal fire occurrence reports for use in GIS analysis.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>19800101</begdate>
+          <enddate>20161231</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>This data set contains federal fire reports from 1980 to 2016.</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>Annually</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-178.816670</westbc>
+        <eastbc>0.000000</eastbc>
+        <northbc>70.330600</northbc>
+        <southbc>0.000000</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>fire reports</themekey>
+        <themekey>fire history</themekey>
+        <themekey>fire occurrence</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>No attempt was made to determine the accuracy of the latitude/longitude coordinates of the reports that fell within the land boundaries of the us as depicted in the statesp020 shapefile from the USGS National Atlas. Therefore, the user is cautioned to examine the accuracy of the location of the data before utilizing it in any GIS analysis.</useconst>
+    <native>Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.0.6491</native>
+  </idinfo>
+  <dataqual>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <pubdate>20170623</pubdate>
+            <title>Federal Fire Occurrence Data from 1980 to 2016</title>
+            <edition>2016</edition>
+            <geoform>vector digital data</geoform>
+            <onlink>https://wildfire.cr.usgs.gov/firehistory/index.html</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>onLine</typesrc>
+        <srccitea>Federal Fire Occurrence Data from 1980 to 2016</srccitea>
+        <srccontr>WFMI - Wildland Fire Management Information System. (BIA, BLM, NPS) FMIS - Fire Management Information System (FWS) FIRESTAT - Fire Statistics System (USFS)</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>FMIS, WFMI, and FIRESTAT data was uploaded into ArcGIS and then converted to the same format.</procdesc>
+        <procdate>20170602</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Entity point</sdtstype>
+        <ptvctcnt>844883</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <geograph>
+        <latres>8.9831528411952133e-009</latres>
+        <longres>8.9831528411952133e-009</longres>
+        <geogunit>Decimal Degrees</geogunit>
+      </geograph>
+      <geodetic>
+        <horizdn>D North American 1983</horizdn>
+        <ellips>GRS 1980</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257222101</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Federal_Wildland_Fire_Activity_1980_to_2016</enttypl>
+        <enttypd>ESRI</enttypd>
+        <enttypds>A collection of geographic features with the same geometry type of point</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>UNIT</attrlabl>
+        <attrdef>Unit that reported the fire</attrdef>
+        <attrdefs>RegionState for USFS</attrdefs>
+        <begdatea>19800101</begdatea>
+        <enddatea>20161231</enddatea>
+      </attr>
+      <attr>
+        <attrlabl>FIPS</attrlabl>
+        <attrdef>Integer State FIPS code</attrdef>
+        <begdatea>19800101</begdatea>
+        <enddatea>20161231</enddatea>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <begdatea>19800101</begdatea>
+        <enddatea>20161230</enddatea>
+      </attr>
+      <attr>
+        <attrlabl>DLATITUDE</attrlabl>
+        <attrdef>Latitude in decimal degrees format</attrdef>
+        <attrdefs>No source for the definition</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>FIRECODE</attrlabl>
+        <attrdef>FireCode is four-character fire incident code to track and compile cost information for fires</attrdef>
+        <attrdefs>https://firecode.gov/</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SIZECLASS</attrlabl>
+        <attrdef>The assignment of a wildfire to a category according to its size</attrdef>
+        <attrdefs>http://bcwildfire.com/MediaRoom/Backgrounders/2003_Fire_Glossary.pdf</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>B</edomv>
+            <edomvd>0.3 to 9.9 acres</edomvd>
+            <edomvds>https://www.nwcg.gov/term/glossary/size-class-of-fire%C2%A0</edomvds>
+          </edom>
+          <edom>
+            <edomv>C</edomv>
+            <edomvd>10.0 to 99.9 acres</edomvd>
+            <edomvds>https://www.nwcg.gov/term/glossary/size-class-of-fire%C2%A0</edomvds>
+          </edom>
+          <edom>
+            <edomv>D</edomv>
+            <edomvd>100.0 to 299.9 acres</edomvd>
+            <edomvds>https://www.nwcg.gov/term/glossary/size-class-of-fire%C2%A0</edomvds>
+          </edom>
+          <edom>
+            <edomv>G</edomv>
+            <edomvd>larger than 5,000.0 acres</edomvd>
+            <edomvds>https://www.nwcg.gov/term/glossary/size-class-of-fire%C2%A0</edomvds>
+          </edom>
+          <edom>
+            <edomv>A</edomv>
+            <edomvd>0.0 to 0.2 acres</edomvd>
+            <edomvds>https://www.nwcg.gov/term/glossary/size-class-of-fire%C2%A0</edomvds>
+          </edom>
+          <edom>
+            <edomv>E</edomv>
+            <edomvd>300.0 to 999.9 acres</edomvd>
+            <edomvds>https://www.nwcg.gov/term/glossary/size-class-of-fire%C2%A0</edomvds>
+          </edom>
+          <edom>
+            <edomv>F</edomv>
+            <edomvd>1000.0 to 4999.9 acres</edomvd>
+            <edomvds>https://www.nwcg.gov/term/glossary/size-class-of-fire%C2%A0</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CAUSE</attrlabl>
+        <attrdef>Cause</attrdef>
+        <attrdefs>CauseCategory for USFS</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Undetermined</edomv>
+            <edomvd>Whenever the cause cannot be proven, the proper classification is undetermined.</edomvd>
+            <edomvds>http://www.interfire.org/res_file/92112m.asp</edomvds>
+          </edom>
+          <edom>
+            <edomv>Human</edomv>
+            <edomvd>Any wildfire caused directly or indirectly caused by a person(s).</edomvd>
+            <edomvds>http://www.interfire.org/res_file/92112m.asp</edomvds>
+          </edom>
+          <edom>
+            <edomv>Natural</edomv>
+            <edomvd>Natural fire causes involve fires caused without direct human intervention, such as lightning, earthquake, wind, and the like.</edomvd>
+            <edomvds>http://www.interfire.org/res_file/92112m.asp</edomvds>
+          </edom>
+        </attrdomv>
+        <begdatea>19800101</begdatea>
+        <enddatea>20161231</enddatea>
+      </attr>
+      <attr>
+        <attrlabl>SUBUNIT</attrlabl>
+        <attrdef>Subunit that reported the fire</attrdef>
+        <attrdefs>ReportingUnitId for USFS</attrdefs>
+        <begdatea>19800101</begdatea>
+        <enddatea>20161231</enddatea>
+      </attr>
+      <attr>
+        <attrlabl>PROTECTION</attrlabl>
+        <attrdef>The protection category for the location of the fire.</attrdef>
+        <attrdefs>No source for definition</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>STATE_FIPS</attrlabl>
+        <attrdef>Two-digit state Federal information Processing Standard (FIPS) code.</attrdef>
+        <attrdefs>http://www.census.gov</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>TOTALACRES</attrlabl>
+        <attrdef>Acres at time of control</attrdef>
+        <attrdefs>No data source for definition</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>FIRETYPE</attrlabl>
+        <attrdef>The code describing the management response to the fire.</attrdef>
+        <attrdefs>National Interagency Fire Statistics Project</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>Natural Out</edomvd>
+          </edom>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>False Alarm</edomvd>
+          </edom>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Action Fire/Suppressed Fires</edomvd>
+          </edom>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>Fuels Management/Prescribed Fire</edomvd>
+          </edom>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>not defined</edomvd>
+          </edom>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>Support Action/Assist Fire</edomvd>
+          </edom>
+          <edom>
+            <edomv>6</edomv>
+            <edomvd>Severity</edomvd>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SIZECLASSN</attrlabl>
+        <attrdef>Numeral equivalent of SIZECLASS alpha</attrdef>
+        <attrdefs>No source for definition</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>STARTDATED</attrlabl>
+        <attrdef>The discovery date of the wildland fire event</attrdef>
+        <attrdefs>No source for definition</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>DLONGITUDE</attrlabl>
+        <attrdef>Longitude in decimal degrees format</attrdef>
+        <attrdefs>No source for the definition</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>ORGANIZATI</attrlabl>
+        <attrdef>The agency that reported the fire.</attrdef>
+        <attrdefs>Organization for USFS.</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>FS</edomv>
+            <edomvd>USDA Forest Service</edomvd>
+            <edomvds>https://www.fs.fed.us/</edomvds>
+          </edom>
+          <edom>
+            <edomv>FWS</edomv>
+            <edomvd>US Fish and Wildlife Service</edomvd>
+            <edomvds>https://www.fws.gov/</edomvds>
+          </edom>
+          <edom>
+            <edomv>BIA</edomv>
+            <edomvd>Bureau of Indian Affairs</edomvd>
+            <edomvds>https://www.bia.gov/</edomvds>
+          </edom>
+          <edom>
+            <edomv>BLM</edomv>
+            <edomvd>Bureau of Land Management</edomvd>
+            <edomvds>https://www.blm.gov/</edomvds>
+          </edom>
+          <edom>
+            <edomv>NPS</edomv>
+            <edomvd>National Park Service</edomvd>
+            <edomvds>https://www.nps.gov/</edomvds>
+          </edom>
+          <edom>
+            <edomv>BOR</edomv>
+            <edomvd>Bureau of Reclamation</edomvd>
+            <edomvds>https://www.usbr.gov/</edomvds>
+          </edom>
+        </attrdomv>
+        <begdatea>19800101</begdatea>
+        <enddatea>20161231</enddatea>
+      </attr>
+      <attr>
+        <attrlabl>SPECCAUSE</attrlabl>
+        <attrdef>Code for Specific Cause of fire</attrdef>
+        <attrdomv>
+          <edom>
+            <edomv>22</edomv>
+            <edomvd>Job Fire</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>18</edomv>
+            <edomvd>Grudge Fire</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>28</edomv>
+            <edomvd>Repel Predatory Animals</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>29</edomv>
+            <edomvd>Stove Fuel Sparks</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>Exhaust-Other</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>6</edomv>
+            <edomvd>Logging Line</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>15</edomv>
+            <edomvd>Slash Burning</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>27</edomv>
+            <edomvd>Playing with Matches</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>16</edomv>
+            <edomvd>R/W Burning</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>21</edomv>
+            <edomvd>Insect/Snake Control</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>17</edomv>
+            <edomvd>Resource Management Burning</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>25</edomv>
+            <edomvd>Powerline</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>30</edomv>
+            <edomvd>Other</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Lightning</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>Aircraft</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>Burning Vehicle</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>19</edomv>
+            <edomvd>Pyromania</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>13</edomv>
+            <edomvd>Field Burning</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>7</edomv>
+            <edomvd>Brakeshoe</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>12</edomv>
+            <edomvd>Burning Dump</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>Exhaust-Powersaw</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>8</edomv>
+            <edomvd>Cooking Fire</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>11</edomv>
+            <edomvd>Trash Burning</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>14</edomv>
+            <edomvd>Land Clearing</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>9</edomv>
+            <edomvd>Warming Fire</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>10</edomv>
+            <edomvd>Smoking</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>26</edomv>
+            <edomvd>Fireworks</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>20</edomv>
+            <edomvd>Smoking out Bees/Game</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>24</edomv>
+            <edomvd>Burning Building</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>23</edomv>
+            <edomvd>Blasting</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>YEAR_</attrlabl>
+        <attrdef>Calendar year extracted from StartDate</attrdef>
+        <attrdefs>No source for definition</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>SUBUNIT2</attrlabl>
+        <attrdef>Reporting unit identifier</attrdef>
+        <attrdefs>USFS District Number when provided</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>TRPSPECCAU</attrlabl>
+        <attrdef>A detailed cause for the wildland fire.</attrdef>
+        <attrdomv>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>Exhaust</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>26</edomv>
+            <edomvd>Fireworks</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>11</edomv>
+            <edomvd>Trash Burning</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>Vehicle</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>22</edomv>
+            <edomvd>Employment</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>31</edomv>
+            <edomvd>Volcanic</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>13</edomv>
+            <edomvd>Field Burning</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>8</edomv>
+            <edomvd>Cooking/warming</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>7</edomv>
+            <edomvd>Brakes</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>12</edomv>
+            <edomvd>Burning Dump</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>15</edomv>
+            <edomvd>Slash Burning</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>19</edomv>
+            <edomvd>Recurrent</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>17</edomv>
+            <edomvd>Resource Management</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>30</edomv>
+            <edomvd>Other, unknown</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>23</edomv>
+            <edomvd>Blasting</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>18</edomv>
+            <edomvd>Grudge Fire</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>16</edomv>
+            <edomvd>Right-of-way</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>14</edomv>
+            <edomvd>Land Clearing</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>10</edomv>
+            <edomvd>Smoking</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Lightning</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>24</edomv>
+            <edomvd>Burning Building</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>27</edomv>
+            <edomvd>Ignition Devices</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>32</edomv>
+            <edomvd>Other, known</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>Aircraft</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>25</edomv>
+            <edomvd>Power Line</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OUTDATED</attrlabl>
+        <attrdef>The date that the wildfire was declared out.</attrdef>
+        <attrdefs>NWCG</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>DISPATCH</attrlabl>
+        <attrdef>Dispatch center name.</attrdef>
+        <attrdefs>No source for definition</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>FiscalYear</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>STATCAUSE</attrlabl>
+        <attrdef>Detailed category for Statistical Cause</attrdef>
+        <attrdefs>No source for definition</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>6</edomv>
+            <edomvd>Railroad</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>Smoking</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>Equipment Use</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>7</edomv>
+            <edomvd>Arson</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>Campfire</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>9</edomv>
+            <edomvd>Miscellaneous</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Lightning</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>Debris Burning</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+          <edom>
+            <edomv>8</edomv>
+            <edomvd>Children</edomvd>
+            <edomvds>FIRESTAT User Guide</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal Value</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FIRENAME</attrlabl>
+        <attrdef>The name of the wildland fire event usually based off of a geographic feature.</attrdef>
+        <attrdefs>No source for definition</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>STATE</attrlabl>
+        <attrdef>One of the constituent units of a nation having a federal government</attrdef>
+        <attrdefs>http://www.merriam-webster.com/dictionary/state</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>FIREPROTTY</attrlabl>
+        <attrdef>Fire Type 1 (10’s digit) are all wildland fires where the appropriate fire management response was taken, excluding natural outs, support actions, and fuels management activities. Fire Type 2 (10’s digit) are all wildland fires discovered that have been extinguished by natural causes prior to initiation of suppression action; excluding fires for which aerial or ground monitoring is deemed the appropriate fire management responses. Fire Type 3 (10’s digit) is action taken on a fire which is not threatening federal lands and no formal agreement exists which would require a federal fire response other than a mutual aid agreement. Fire Type 4 (10’s digit) are all fires or mechanical treatments necessary to reduce fuels as a precursor to the introduction of fire or when the hazards of using fire would be excessive, used to meet approved land management objectives. Fire Type 5 (10’s digit) (False Alarms) are for reported fires on which some type of response was initiated but no suppression action took place. Fire Type 6 (10’s digit) are projects using funds assigned from a fire severity account. Protection Type 1 (1’s digit) – Bureau land protected by that bureau Protection Type 2 (1’s digit) – Bureau land protected by another federal agency or bureau under a cooperative agreement. Protection Type 3 (1’s digit) – Bureau land protected by another non-federal agency under a cooperative agreement Protection Type 4 (1's digit) – A Bureau that takes a confine and contain action of a fire on their land Protection Type 5 (1’s digit) – Other land not under cooperative agreement or contract where action is taken by the bureau to prevent spread onto their bureau land. Protection Type 6 (1’s digit) – Other land protected by the bureau under a cooperative agreement or contract. Protection Type 7 (1’s digit) – Support actions by the bureau on wildland fires. Protection Type 8 (1’s digit) – Prescribed fires Protection Type 9 (1’s digit) – Where the appropriate fire management response was based on objectives from an approved NEPA document. Protection Type A (1's digit) - BLM land (point of origin) independent of protection responsibility Protection Type B (1’s digit) – Other Land (non-BLM point of origin) BLM Response Legally Required Protection Type C (1’s digit) – (AK) Other Land (non-BLM point of origin) BLM Response Legally Required Protection Type D (1’s digit) – Other Land (non-BLM point of origin) BLM land burns Protection Type E (1's digit) - Agency responds to a reported wildland fire...(fire not found/did not occur)</attrdef>
+        <attrdefs>SACS</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>5E</edomv>
+            <edomvd>False Alarm - Agency responds to a reported wildland fire...(fire not found/did not occur)</edomvd>
+          </edom>
+          <edom>
+            <edomv>19</edomv>
+            <edomvd>Response based on approved FMP &amp; end result beneficial on &gt;50% of burned acres</edomvd>
+          </edom>
+          <edom>
+            <edomv>22</edomv>
+            <edomvd>A Federal Land Agencies Land, Natural Out, Protected by that another Federal Agency</edomvd>
+          </edom>
+          <edom>
+            <edomv>47</edomv>
+            <edomvd>Support Actions by USFS on prescribed fire projects</edomvd>
+          </edom>
+          <edom>
+            <edomv>25</edomv>
+            <edomvd>Other Land, Natural Out, with no agreement protected by a Federal Land Agency</edomvd>
+          </edom>
+          <edom>
+            <edomv>26</edomv>
+            <edomvd>Other Land, Natural Out, with agreement protected by a Federal Land Agency</edomvd>
+          </edom>
+          <edom>
+            <edomv>67</edomv>
+            <edomvd>Severity Funds, Support action by a Bureau</edomvd>
+          </edom>
+          <edom>
+            <edomv>2B</edomv>
+            <edomvd>Natural Out - Other Land (non-BLM point of origin) BLM Response would have been Legally Required</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>15</edomv>
+            <edomvd>Other Land with no agreement protected by a Federal Land Agency</edomvd>
+          </edom>
+          <edom>
+            <edomv>53</edomv>
+            <edomvd>A False Alarm on a Federal Land Agency Land that is protected by a non Federal Organiztion</edomvd>
+          </edom>
+          <edom>
+            <edomv>55</edomv>
+            <edomvd>A False Alarm on other Land with no agreement</edomvd>
+          </edom>
+          <edom>
+            <edomv>21</edomv>
+            <edomvd>A Federal Land Agencies Land, Natural Out, Protected by that Agency</edomvd>
+          </edom>
+          <edom>
+            <edomv>56</edomv>
+            <edomvd>A False Alarm on other land with an agreement</edomvd>
+          </edom>
+          <edom>
+            <edomv>48</edomv>
+            <edomvd>Prescribed Burn within prescription</edomvd>
+          </edom>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>not defined</edomvd>
+          </edom>
+          <edom>
+            <edomv>12</edomv>
+            <edomvd>A Federal Land protected by another Federal agency under co-op agreement/contract.</edomvd>
+          </edom>
+          <edom>
+            <edomv>11</edomv>
+            <edomvd>A Federal Land Agency that takes suppression action of a fire on their land</edomvd>
+          </edom>
+          <edom>
+            <edomv>52</edomv>
+            <edomvd>A False Alarm on a Federal Land Agency Land that is protected by another Federal Agency</edomvd>
+          </edom>
+          <edom>
+            <edomv>23</edomv>
+            <edomvd>A Federal Land Agencies Land, Natural Out, Protected by non Federal Agency</edomvd>
+          </edom>
+          <edom>
+            <edomv>49</edomv>
+            <edomvd>Prescribed Fire, Natural Ignition</edomvd>
+          </edom>
+          <edom>
+            <edomv>14</edomv>
+            <edomvd>A Federal Land Agency that takes a confine and contain action of a fire on their land</edomvd>
+          </edom>
+          <edom>
+            <edomv>1C</edomv>
+            <edomvd>Response Fire - (AK) Other Land (non-BLM point of origin) BLM Response Legally Required</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>2C</edomv>
+            <edomvd>Natural Out - (AK) Other Land (non-BLM - point of origin) BLM would have been Legally Required</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>16</edomv>
+            <edomvd>Other Land with agreement protected by a Federal Land Agency</edomvd>
+          </edom>
+          <edom>
+            <edomv>2A</edomv>
+            <edomvd>Natural Out - BLM land (point of origin) independent of protection responsibility</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>61</edomv>
+            <edomvd>Severity Funds, Bureau land protected by that Bureau</edomvd>
+          </edom>
+          <edom>
+            <edomv>1D</edomv>
+            <edomvd>Response Fire - Other Land (non-BLM point of origin) BLM land burns</edomvd>
+          </edom>
+          <edom>
+            <edomv>51</edomv>
+            <edomvd>A False Alarm on a Federal Land Agency Land that is protected by that Agency</edomvd>
+          </edom>
+          <edom>
+            <edomv>37</edomv>
+            <edomvd>Support Action</edomvd>
+          </edom>
+          <edom>
+            <edomv>13</edomv>
+            <edomvd>A Federal Land Agency that has non-Federal Personnel Suppression action of a fire on their land</edomvd>
+          </edom>
+          <edom>
+            <edomv>41</edomv>
+            <edomvd>Mechanical Hazard Reduction Treatments on USFS Land</edomvd>
+          </edom>
+          <edom>
+            <edomv>1B</edomv>
+            <edomvd>Response Fire - Other Land (non-BLM point of origin) BLM Response Legally Required</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GACC</attrlabl>
+        <attrdef>The physical location of an interagency, regional operation center for the effective coordination, mobilization and demobilization of emergency management resources.</attrdef>
+        <attrdefs>NWCG</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>CONTRDATED</attrlabl>
+        <attrdef>The date the wildland fire was controlled.</attrdef>
+        <attrdefs>NWCG</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>FIRENUMBER</attrlabl>
+        <attrdef>Fire Number</attrdef>
+        <attrdefs>FireNumber for USFS</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>FIREID</attrlabl>
+        <attrdef>The FireID for WFMI, FireStat, and FMIS</attrdef>
+        <attrdefs>No source for definition</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>TRPGENCAUS</attrlabl>
+        <attrdef>The category type of the cause for the wildland fire</attrdef>
+        <attrdefs>No source</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Natural</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>Incendiary</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>Fire Use</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>7</edomv>
+            <edomvd>Railroads</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>Smoking</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>6</edomv>
+            <edomvd>Equipment</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>8</edomv>
+            <edomvd>Juveniles</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>9</edomv>
+            <edomvd>Miscellaneous</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>Campfire</edomvd>
+            <edomvds>WFMI</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20170621</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>The Department of the Interior, Office of Wildland Fire</cntorg>
+          <cntper>Susan Goodman</cntper>
+        </cntorgp>
+        <cntpos>Fire Management Analyst</cntpos>
+        <cntaddr>
+          <addrtype>physical</addrtype>
+          <address>Denver Federal Center, Building 25</address>
+          <city>Denver</city>
+          <state>Colorado</state>
+          <postal>80225</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>303-236-1904</cntvoice>
+        <cntemail>susan_goodman@ios.doi.gov</cntemail>
+        <hours>8AM to 5PM Mountain Time</hours>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>
