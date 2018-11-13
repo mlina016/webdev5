@@ -53,18 +53,7 @@
 
         //ADD LAYER HERE
         // add hosted feature layer
-        const earthquakesLayer = L.esri.featureLayer({url: 'https://services.arcgis.com/8df8p0NlLFEShl0r/arcgis/rest/services/NaturalDisasters_Earthquakes/FeatureServer/0'}).addTo(map);
-
-        // set up popup for earthquakes layer
-        earthquakesLayer.bindPopup(function(evt) {
-            return L.Util.template(
-              '<table>'+
-                '<tr><td>LOCATION:</td><td>{LOCATION}</td></tr>'+
-                '<tr><td>YEAR:</td><td>{YEAR}</td></tr>'+
-                '<tr><td>MAGNITUDE:</td><td>{MAGNITUDE}</td></tr>'+
-              '</table>',
-              evt.feature.properties);
-        });
+        const elevcontour = L.esri.featureLayer({url: ''}).addTo(map);
     </script>
 </body>
 </html>
